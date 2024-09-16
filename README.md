@@ -85,12 +85,56 @@ Evaluate the model on the test set using metrics like:
 3. **Run the Notebook**: Open the notebook in Google Colab, and execute the cells step-by-step.
 4. **Visualize Results**: The notebook will output classification results along with visualizations such as confusion matrices and ROC curves.
 
+
+### Transfer the Folder and Files to drive
+
+Add the data folder,vit.py and utils.py to your Google Drive.
+
+### Mount Google Drive on Google Colab
+
+To mount your Google Drive on Google Colab, follow these steps:
+
+1. Run the following code block in Google Colab:
+
+    ```bash
+    from google.colab import drive
+    drive.mount('/content/drive')
+    ```
+2. Follow the link provided and authenticate with your Google account.
+3. Copy the authentication code and paste it into the designated area only if you have 2 factor authentication.
+
+### Navigate to Content Directory
+
+Navigate to the content directory in Google Colab:
+```bash
+%cd /content
+```
+
+### Paste vit.py and utils.py
+Upload the vit.py and utils.py in Google Drive first.
+
+Upload vit.py and utils.py files to Google Colab. Then, move them to the content directory using the file manager or the following command:
+
+```bash
+!mv /content/drive/your_path/vit.py /content
+!mv /content/drive/your_path/utils.py /content
+```
+Replace your_path with the actual path to the files in your Google Drive.
+
+or 
+
+directly drag and move the files from local storage to the content folder
+
+### Run Code Blocks
+
+Now, you are all set to run the code blocks in code.ipynb one by one. Follow the instructions within the notebook for each code block.
+
 ### Example Output:
 - Tumor detected: **Yes**
 - Tumor type: **Glioma**
 
 ## Results and Performance
-- Achieved **X% accuracy** on the test set.
+- Achieved  **higher accuracy** on the test set.
 - Precision, recall, and F1-scores for each tumor class.
 - Confusion matrix showing model performance on different tumor types.
 
